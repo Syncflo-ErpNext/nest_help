@@ -19,4 +19,4 @@ Drop HTML help pages in `nest_help/public/help/` and any NestERP app can auto-di
 
 ## License
 
-MIT
+Proprietary

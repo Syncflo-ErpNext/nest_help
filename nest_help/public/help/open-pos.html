@@ -180,6 +180,64 @@ If both boxes are empty the till stops the sale. Click <strong>Edit Cart</strong
   <span class="step-num">5</span> Click <strong>Checkout</strong>, then <strong>Complete Order</strong>. The refund goes to <strong>Credit Card</strong>. A refund cannot be paid out as a voucher or a credit note.
 </div>
 
+<h2>Sales Other (Items With No SKU)</h2>
+
+<p>Use this for something that has no item code, such as a custom item. It goes to Sage as a line on the Sales Other account, not as stock. You never choose the account.</p>
+
+<div class="step">
+  <span class="step-num">1</span> Build the sale as normal, then click the <strong>Sales Other</strong> button above the item search.
+</div>
+
+<div class="step">
+  <span class="step-num">2</span> Type the <span class="field">Description</span> (up to 100 characters) and the <span class="field">Price (incl. VAT)</span>, then click <strong>Add to cart</strong>. The description prints on the invoice and shows on the End of Day report.
+</div>
+
+<div class="step">
+  <span class="step-num">3</span> The line goes in the cart at quantity 1. Add any other items, then click <strong>Checkout</strong> and <strong>Complete Order</strong> as usual.
+</div>
+
+<div class="note">
+A Sales Other line cannot be changed. To fix a mistake, click the line, confirm that you want to remove it, and capture it again. A sale with a Sales Other line cannot take a discount, so remove any discount first. To return one, tick only the Sales Other line, then do a second return for any stock items.
+</div>
+
+<h2>Quotes</h2>
+
+<p>A quote needs a named customer. No stock moves and nothing goes to Sage until the quote is invoiced and the sale is completed.</p>
+
+<div class="step">
+  <span class="step-num">1</span> Select your name in <span class="field">Select POS User</span> and put the customer on the cart. Search for them in the customer box, or click the blue <strong>+</strong> to add a new one. The store's walk-in customer cannot be quoted.
+</div>
+
+<div class="step">
+  <span class="step-num">2</span> Add the items to the cart if they are in stock, then click the pale blue <strong>Quote</strong> button at the top right, beside <strong>Recent Orders</strong>.
+</div>
+
+<div class="step">
+  <span class="step-num">3</span> Check <span class="field">Valid until</span>, which is 30 days from today unless you change it. The items from the cart are listed. Add a row for anything else, even an item with no stock, and its price fills in. Change <span class="field">Qty</span> or <span class="field">Price incl. VAT</span> if you need to.
+</div>
+
+<div class="step">
+  <span class="step-num">4</span> Click <strong>Save quote</strong>. The quote number appears, with a <strong>Print quote</strong> button. The cart clears for the next sale.
+</div>
+
+<h2>Turning a Quote Into a Sale</h2>
+
+<div class="step">
+  <span class="step-num">1</span> Click <strong>Recent Orders</strong> and choose <strong>Quotes</strong> in the Sales / Returns filter. Search by customer or quote number if you need to.
+</div>
+
+<div class="step">
+  <span class="step-num">2</span> Click the quote, then click <strong>Invoice this quote</strong>. You can also click <strong>Print quote</strong> here to print it again.
+</div>
+
+<div class="step">
+  <span class="step-num">3</span> The till opens it as a sale at the quoted prices. Click <strong>Checkout</strong> and <strong>Complete Order</strong> as usual. The quote leaves the list once the sale is completed.
+</div>
+
+<div class="note">
+The stock must be in your store before the sale can be completed. For wallpaper or anything ordered in, quote it now, request the stock into your store when it arrives, then invoice the quote. A Sales Other line cannot go on a quote.
+</div>
+
 <h2>What Happens in Sage</h2>
 
 <p>Every sale and every return is sent to Sage as soon as it is completed, and Sage stock is adjusted. You do not have to do anything. If Sage cannot be reached, the sale still goes through on the till and the system sends it again automatically every 15 minutes.</p>

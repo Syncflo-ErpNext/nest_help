@@ -82,6 +82,22 @@
 The import log shows which items were created, skipped (already exist), or had errors. If you included quantities in the <span class="field">qty</span> column, a Stock Entry is created to receive the stock into the target warehouse.
 </div>
 
+<div class="note">
+Big sheets: upload the whole sheet in one go. Up to 300 rows import while you wait. A bigger sheet shows QUEUED in the import log and is imported in the background: carry on working, and a notification (the bell at the top left) tells you when it is done. Click it to open the result.
+</div>
+
+<h2>Correcting items that already exist</h2>
+<div class="step">
+  <span class="step-num">1</span> On a new importer choose the Category and click <strong>Download Current Items</strong>. Choose <strong>Only items with stock</strong> or <strong>All items</strong>. You get those items with their values as they are now, and the Allowed values sheet. Rows that look wrong are yellow, with the reason in the last column, <span class="field">check</span>.
+</div>
+<div class="step">
+  <span class="step-num">2</span> Correct the values in the sheet. Leave a cell empty to keep what the item has.
+</div>
+<div class="step">
+  <span class="step-num">3</span> Tick <strong>Update Only (no new items, no stock)</strong>, attach the sheet and click <strong>Save</strong>. Existing items are updated; nothing is created and no stock is added.
+</div>
+<p>Download a fresh sheet each time you start: a sheet downloaded earlier carries the values and categories of that day.</p>
+
 <h2>Template Columns</h2>
 <table>
   <tr><th>Column</th><th>Required</th><th>Description</th></tr>

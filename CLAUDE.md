@@ -40,3 +40,12 @@ Tile label "Sales Persons" -> slug `sales-persons` -> file `public/help/sales-pe
   copy) live in `CoWork_Helper/sites/ardmore-item-attributes-2026-11-23/`.
 - Order matters: deploy the app first, then update the Server Script. A Server Script that
   queues without the app installed would leave big sheets queued forever.
+- 0.0.15 (23 Nov 2026): `download_import_sheet(category, in_stock=0)`. in_stock=1 keeps only items
+  with stock (Bin actual_qty > 0 in the user's default company's warehouses). Every row that looks
+  wrong is yellow with the reason in a last `check` column (the importer ignores unknown columns):
+  a value the item name contradicts (one list value in the name, a different one on the item;
+  design read first and taken out of the name, collection read from the whole name), or the list's
+  first value (Bonnie/Acacia/Amber/Acrylic/Small = what ERPNext gave items created without one).
+  The Client Script "Home Fashion Importer - Download Template" asks All items / Only items with
+  stock; update it on the site only AFTER this version is deployed (the old api has no in_stock).
+  Help page import-home-fashion.html updated to match.

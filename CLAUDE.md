@@ -28,3 +28,15 @@ Tile label "Sales Persons" -> slug `sales-persons` -> file `public/help/sales-pe
 
 - GitHub: `Syncflo-design/nest_help` (org for NestERP apps)
 - Module: `Nest Help`
+
+## Ardmore Home/Fashion importer (0.0.13, 0.0.14)
+
+- `api.download_import_sheet`: Download Template / Download Current Items (tickets 0165/0166).
+- `home_fashion_import.py` (0.0.14): a sheet over 300 rows is imported in a background job.
+  The site's Server Script "Home Fashion Importer - Import" imports nothing for such a sheet
+  and sets `doc.flags.nest_hfi_queued`; the `on_update` hook enqueues `run_import`, which saves
+  the importer again with `doc.flags.nest_hfi_background` so the Server Script imports every
+  row, then sends the user a bell notification. The Server Script copy (and the rollback
+  copy) live in `CoWork_Helper/sites/ardmore-item-attributes-2026-11-23/`.
+- Order matters: deploy the app first, then update the Server Script. A Server Script that
+  queues without the app installed would leave big sheets queued forever.
